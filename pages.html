@@ -18,7 +18,7 @@
 <title>Dashboard@SJ</title>
 </head>
 <body>
-<nav class="navbar navbar-expand-sm navbar-dark " style="background-color:#E94933">
+<nav class="navbar navbar-expand-sm navbar-dark" style="background-color:#E94933">
 <div class="container top">
 <a class="navbar-brand">Admin Strap</a>
 <!--toggle button -->
@@ -26,13 +26,13 @@
 <span  class="navbar-toggler-icon"></span>
 </button>
 
-  <div id="lists" class="navbar-collapse collapse">  
+  <div id="lists" class="navbar-collapse collapse">
   <ul class="navbar-nav mr-auto">
     <li class="nav-item">
-      <a class="nav-link active" href="index.html">Home</a>
+      <a class="nav-link" href="index.html">Home</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="pages.html">Pages</a>
+      <a class="nav-link active" href="pages.html">Pages</a>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="#">Posts</a>
@@ -68,7 +68,7 @@
 </div>
 </header>
 <div class="container dashboard">
-<p style="padding:5px">Dashboard</p>
+<p style="padding:5px">Dashboard&nbsp &nbsp<span style="rgba(0,0,0,0.5);">pages</span></p>
 </div>
 
 <div class="container">
@@ -94,77 +94,63 @@
                  <div class="progress-bar" style="width:60%;background-color:rgba(0,0,0,0.7)">60%</div>
             </div>
           </div>
-      </div>   
+      </div>
       <div class="card-body">Bandwidth-used</div>
       <div class="class-body">
           <div class="container" style="margin-bottom:10px">
             <div class="progress">
                  <div class="progress-bar" style="width:40%;background-color:rgba(0,0,0,0.7)">40%</div>
-            </div>  
+            </div>
           </div>
-      </div>  
+      </div>
       </div>
     </div>
    <div class="col-sm-9">
       <div class="card">
-        <div class="card-header">Website Overview</div>
-        <div class="card-body">
-            <div class="row">
-              <div class="col-sm-3">
-                <div  class="jumbotron jumt" ><div  class="jumpElement"><i class="fas fa-user" style="margin-right:4px;font-size:25px;"></i>
-                 <h3 style="display:inline">126</h3><p>Users</p></div></div>
-              </div>
-              <div class="col-sm-3">
-                 <div  class="jumbotron jumt" ><div class="jumpElement"><i class="fas fa-file-alt" style="margin-right:4px;font-size:25px;"></i>
-                 <h3 style="display:inline">12</h3><p>Pages</p></div></div>
-              </div>
-              <div class="col-sm-3">
-                 <div  class="jumbotron jumt" ><div class="jumpElement"><i class="fas fa-pencil-alt" style="margin-right:4px;font-size:25px;"></i>
-                 <h3 style="display:inline">33</h3><p>Posts</p></div></div>
-              </div>
-              <div class="col-sm-3"> 
-                 <div  class="jumbotron jumt" ><div class="jumpElement"> <i class="fas fa-chart-line" style="margin-right:0px;font-size:25px;"></i>
-                 <h3 style="display:inline">1554</h3><p>Visits</p></div></div>
-              </div>
-            </div>
-       </div>
-      </div>
-      <div class="card latest">
-         <div class="card-header">Latest users</div>
-         <div class="card-body">
-               <table class="table table-striped table-hover">
-                  <tr><th>Name</th>
-                     <th>Email</th>
-                     <th>Joined</th>
-                 </tr>
-                 <tr>
-                       <td>John</td>
-                       <td>john@gmail.com</td>
-                       <td>13,dec 2016</td>
-                 </tr>
-                 <tr>
-                        <td>Root</td>
-                        <td>root@gmail.com</td>
-                        <td>01,aug 2016</td>
-                  </tr>
-                  <tr>
-                        <td>Michell</td>
-                        <td>michell@gmail.com</td>
-                        <td>16,apr 2016</td>
-                 </tr>
-                 <tr>
-                        <td>Starc</td>
-                        <td>starc@gmail.com</td>
-                        <td>21,jan 2016</td>
-                  </tr>
-               </table>
-         </div>
-       </div>  
-    </div>
+        <div class="card-header">Pages</div>
+        <div class="card-body"><input type"text" id="textbox" placeholder="&nbsp &nbsp Filter pages.."></div>
+                    <table class="table table-striped table-hover">
+                    <tr>
+                          <th>Titled</th>
+                          <th>Publishment</th>
+                          <th>Created</th>
+                     </tr>
+                      <tr>
+                          <td>Home</td>
+                          <td>&nbsp &nbsp<i class="fas fa-check"></i></td>
+                          <td>13,dec 2016</td>
+                          <td><a class="btn btn-default" href="edit.html"> Edit </a>
+                                        <a class="btn btn-danger" href="#"> Delete </a></td>
+                    </tr>
+                    <tr>
+                          <td> About </td>
+                          <td>&nbsp &nbsp<i class="fas fa-check"></i></td>
+                          <td>13,dec 2016</td>
+                          <td><a class="btn btn-default" href="edit.html"> Edit </a>
+                                       <a class="btn btn-danger" href="#"> Delete </a></td>
+                    </tr>
+                    <tr>
+                          <td> Services </td>
+                          <td>&nbsp &nbsp<i class="fas fa-check"></i></td>
+                          <td>14,dec 2016</td>
+                          <td><a class="btn btn-default" href="edit.html"> Edit </a>
+                                        <a class="btn btn-danger" href="#"> Delete </a></td>
+                    </tr>
+                    <tr>
+                          <td> Contact </td>
+                          <td>&nbsp &nbsp<i class="fas fa-check"></i></td>
+                          <td>15,dec 2016</td>
+                          <td><a class="btn btn-default" href="edit.html"> Edit </a>
+                                        <a class="btn btn-danger" href="#"> Delete </a></td>
+                    </tr>
+                      </table>
+     
+ </div>
+   </div>
   </div>
+ </div>
 </div>
 <footer>
-<p style="text-align:center">&copy Copyright@ Shreyansh jain feb 2018</p>
+<p style="text-align:center">&copy&nbspCopyright@ Shreyansh jain feb 2018</p>
 </footer>
 </body>
-</html>
