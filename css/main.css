@@ -1,0 +1,71 @@
+header
+{
+  background-color:black;
+  color:white;
+  padding:10px;
+}
+.fa-cog
+{
+  font-size:35px;
+  margin-right:6px;
+}
+.create,.create:hover
+{
+   color:#333333;
+   background-color:white;
+   padding:6px;
+   float:right;
+   margin-top:5px;
+   text-decoration:none;
+   color:black;
+}
+.dashboard
+{
+  background-color:#CDCDCD;
+  margin-top:8px;
+  border-radius:5px;
+}
+.top
+{
+  padding-top:0.1px;
+  padding-bottom:0.1px;
+}
+.card-header
+{
+  background-color:#E94933;
+}
+.disk
+{
+margin-top:8px;
+margin-bottom:8px;
+}
+.dash2
+{
+ float:right;
+ background-color:gray;
+ border-radius:20%;
+}
+.pages,.pages:hover
+{
+  text-decoration:none;
+  color:black;
+}
+.ppu:hover
+{
+  background-color:rgba(0,0,0,0.2);
+}
+.latest
+{
+  margin-top:8px;
+}
+.active
+{
+  background-color:#800000;
+}
+footer
+{
+background-color:black;
+padding:10px;
+color:white;
+}
+
