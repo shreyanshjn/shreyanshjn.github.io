@@ -26,10 +26,10 @@
 <span  class="navbar-toggler-icon"></span>
 </button>
 
-  <div id="lists" class="navbar-collapse collapse">  
+  <div id="lists" class="navbar-collapse collapse">
   <ul class="navbar-nav mr-auto">
     <li class="nav-item">
-      <a class="nav-link active" href="index.html">Home</a>
+      <a class="nav-link" href="index.html">Home</a>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="pages.html">Pages</a>
@@ -38,7 +38,7 @@
       <a class="nav-link" href="#">Posts</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">Users</a>
+      <a class="nav-link active" href="users.php">Users</a>
     </li>
    </ul>
 
@@ -84,7 +84,7 @@
         <a class="pages" href="#"> <div class="card-body ppu">
          <i class="fas fa-pencil-alt" style="margin-right:4px;"></i>Posts
            <span class="badge dash2" >126</span></div><hr style="margin:0px;"></a>
-        <a href="#" class="pages"><div class="card-body ppu">
+        <a href="users.php" class="pages"><div class="card-body ppu">
         <i class="fas fa-user" style="margin-right:4px;"></i> Users
         <span class="badge dash2">52</span></div><hr style="margin:0px;"></a>
        </div>
@@ -96,77 +96,48 @@
                  <div class="progress-bar" style="width:60%;background-color:rgba(0,0,0,0.7)">60%</div>
             </div>
           </div>
-      </div>   
+      </div>
       <div class="card-body">Bandwidth-used</div>
       <div class="class-body">
           <div class="container" style="margin-bottom:10px">
             <div class="progress">
                  <div class="progress-bar" style="width:40%;background-color:rgba(0,0,0,0.7)">40%</div>
-            </div>  
-          </div>
-      </div>  
-      </div>
-    </div>
-   <div class="col-md-9">
-      <div class="card">
-        <div class="card-header">Website Overview</div>
-        <div class="card-body">
-            <div class="row">
-              <div class="col-md-3">
-                <div  class="jumbotron jumt" ><div  class="jumpElement"><i class="fas fa-user" style="margin-right:4px;font-size:25px;"></i>
-                 <h3 style="display:inline">126</h3><p>Users</p></div></div>
-              </div>
-              <div class="col-md-3">
-                 <div  class="jumbotron jumt" ><div class="jumpElement"><i class="fas fa-file-alt" style="margin-right:4px;font-size:25px;"></i>
-                 <h3 style="display:inline">12</h3><p>Pages</p></div></div>
-              </div>
-              <div class="col-md-3">
-                 <div  class="jumbotron jumt" ><div class="jumpElement"><i class="fas fa-pencil-alt" style="margin-right:4px;font-size:25px;"></i>
-                 <h3 style="display:inline">33</h3><p>Posts</p></div></div>
-              </div>
-              <div class="col-md-3"> 
-                 <div  class="jumbotron jumt" ><div class="jumpElement"> <i class="fas fa-chart-line" style="margin-right:0px;font-size:25px;"></i>
-                 <h3 style="display:inline">1554</h3><p>Visits</p></div></div>
-              </div>
             </div>
-       </div>
+          </div>
       </div>
-      <div class="card latest">
-         <div class="card-header">Latest users</div>
-         <div class="card-body">
-               <table class="table table-striped table-hover">
-                  <tr><th>Name</th>
-                     <th>Email</th>
-                     <th>Joined</th>
-                 </tr>
-                 <tr>
-                       <td>John</td>
-                       <td>john@gmail.com</td>
-                       <td>13,dec 2016</td>
-                 </tr>
-                 <tr>
-                        <td>Root</td>
-                        <td>root@gmail.com</td>
-                        <td>01,aug 2016</td>
-                  </tr>
-                  <tr>
-                        <td>Michell</td>
-                        <td>michell@gmail.com</td>
-                        <td>16,apr 2016</td>
-                 </tr>
-                 <tr>
-                        <td>Starc</td>
-                        <td>starc@gmail.com</td>
-                        <td>21,jan 2016</td>
-                  </tr>
-               </table>
-         </div>
-       </div>  
+      </div>
     </div>
-  </div>
+    <div class=col-md-9>
+    <div class="card">
+    <div class="card-header">Users</div>
+     <div class="card-body"><input type"text" id="textbox" placeholder="&nbsp &nbsp Filter pages.."></div>
+       <div>
+            <table class="table table-striped table-hover">
+              <tr>
+              <th>Name</th>
+              <th>Username</th>
+              <th>Email</th>
+            </tr>
+            <?php include 'setup.php';
+             $sql="Select name,username,email from dash";
+             $result=$conn->query($sql);
+             if($result->num_rows>0)
+             { 
+                 while($rows=$result->fetch_assoc())
+                 {?>
+                    <tr><td><?php echo $rows["name"]?></td>
+                        <td><?php echo $rows["username"]?></td>
+                        <td><?php echo $rows["email"]?></td>
+                    </tr> 
+                <?php }}?>
+            </table>
+       </div>
+    </div>
+    </div>
+</div>
 </div>
 <footer>
-<p style="text-align:center">&copy Copyright@ Shreyansh jain feb 2018</p>
+<p style="text-align:center">&copy&nbspCopyright@ Shreyansh jain feb 2018</p>
 </footer>
 </body>
 </html>
