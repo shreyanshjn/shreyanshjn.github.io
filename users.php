@@ -29,10 +29,10 @@
   <div id="lists" class="navbar-collapse collapse">
   <ul class="navbar-nav mr-auto">
     <li class="nav-item">
-      <a class="nav-link" href="index.html">Home</a>
+      <a class="nav-link" href="index.php">Home</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="pages.html">Pages</a>
+      <a class="nav-link" href="pages.php">Pages</a>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="#">Posts</a>
@@ -78,7 +78,7 @@
     <div class="col-md-3">
       <div class="card">
         <div class="card-header"><i class="fas fa-cog" style="font-size:20px;"></i>Dashboard</div>
-        <a  class="pages" href="pages.html"><div class="card-body ppu">
+        <a  class="pages" href="pages.php"><div class="card-body ppu">
            <i class="fas fa-file-alt" style="margin-right:4px;"></i>Pages<span class="badge dash2" >33</span></div>
            <hr style="margin:0px;"></a>
         <a class="pages" href="#"> <div class="card-body ppu">
@@ -86,7 +86,19 @@
            <span class="badge dash2" >126</span></div><hr style="margin:0px;"></a>
         <a href="users.php" class="pages"><div class="card-body ppu">
         <i class="fas fa-user" style="margin-right:4px;"></i> Users
-        <span class="badge dash2">52</span></div><hr style="margin:0px;"></a>
+        <span class="badge dash2">
+         <?php include 'setup.php';
+              $sql="Select *  from dash ORDER BY id DESC limit 1";
+              $result=$conn->query($sql);
+              if($result->num_rows>0)
+              {
+                 while($rows=$result->fetch_assoc())
+                 { 
+                   echo $rows["id"];
+                 }
+              }
+         ?>
+       </span></div><hr style="margin:0px;"></a>
        </div>
       <div class="card disk">
       <div class="card-body">Disk space used</div>
@@ -111,7 +123,7 @@
     <div class="card">
     <div class="card-header">Users</div>
      <div class="card-body"><input type"text" id="textbox" placeholder="&nbsp &nbsp Filter pages.."></div>
-       <div>
+       <div class="UserData">
             <table class="table table-striped table-hover">
               <tr>
               <th>Name</th>
@@ -136,7 +148,7 @@
     </div>
 </div>
 </div>
-<footer>
+<footer style="margin-top:8px">
 <p style="text-align:center">&copy&nbspCopyright@ Shreyansh jain feb 2018</p>
 </footer>
 </body>

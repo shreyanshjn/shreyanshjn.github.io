@@ -1,8 +1,10 @@
 <!DOCTYPE HTML>
 <html lang="en-US">
 <head>
+<style>input.ng-valid{ background-color:rgba(0,255,255,0.4);}</style>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
@@ -29,10 +31,10 @@
   <div id="lists" class="navbar-collapse collapse">
   <ul class="navbar-nav mr-auto">
     <li class="nav-item">
-      <a class="nav-link" href="index.html">Home</a>
+      <a class="nav-link" href="index.php">Home</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="pages.html">Pages</a>
+      <a class="nav-link" href="pages.php">Pages</a>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="#">Posts</a>
@@ -64,13 +66,13 @@
 </div>
 </header>
 <div>
-<form   action="<?php echo $_SERVER["PHP_SELF"];?>" method="post">
+<form  ng-app=""  action="<?php echo $_SERVER["PHP_SELF"];?>" method="post">
 <div class="signup" >
-<label>Name</label><br><input type="text"  required name="name" placeholder="Name"><br>
-<label>Username</label><br><input type="text"  required name="usrname"placeholder="Username"><br>
-<label>Email</label><br><input type="email"  required name="email"placeholder="Email"><br>
-<label>Create password</label><br><input type="password" required name="password1"placeholder="Create password"><br>
-<label>Confirm password</label><br><input type="password" required name="password2"placeholder="Confirm password"><br>
+<label>Name</label><br><input type="text"   ng-model="myText" required name="name" placeholder="Name"><br>
+<label>Username</label><br><input type="text"   ng-model="myText1" required name="usrname"placeholder="Username"><br>
+<label>Email</label><br><input type="email" ng-model="myText2" required name="email"placeholder="Email"><br>
+<label>Create password</label><br><input type="password"  ng-model="myText3" required name="password1"placeholder="Create password"><br>
+<label>Confirm password</label><br><input type="password"  ng-model="myText4" required name="password2"placeholder="Confirm password"><br>
 <input type="checkbox"required name="box"><span style="margin-left:2px">I accept the <a href="#" target="_blank">terms and conditions</a></span><br>
 <input type="submit"><br>
 </div>

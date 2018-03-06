@@ -121,3 +121,8 @@ label
 {
    margin-bottom:0px;
 }
+.UserData
+{
+   height:400px;
+   overflow:auto;
+}
