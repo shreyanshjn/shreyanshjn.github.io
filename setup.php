@@ -1,6 +1,6 @@
 <?php
 $username="root";
-$pwd="mylaptop62$$";
+$pwd="";
 $servername="localhost";
 $database="dashboard";
 $conn=new mysqli($servername,$username,$pwd,$database);
